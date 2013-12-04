@@ -449,7 +449,7 @@ Carousel = function ($element, options) {
 	fn.highlightEffect = function () {
 		var self = this;
 		self.$paginationItem.animate({opacity: 0.4}, {duration: 300, queue: false});
-		self.$paginationItem + $('.' + self.o.currentClass).animate({opacity: 1}, {duration: 300, queue: false});
+		self.$paginationItem + self.$element.find('.' + self.o.currentClass).animate({opacity: 1}, {duration: 300, queue: false});
 	}
 	
 	/**
