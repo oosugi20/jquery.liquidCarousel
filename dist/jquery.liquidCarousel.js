@@ -1,7 +1,7 @@
 /*! jquery.liquidCarousel.js (git@github.com:rin316/jquery.liquidCarousel.js.git)
  * jQuery carousel plugin. 幅が足りない場合は要素を左右にclone。
- * lastupdate: 2013-11-28
- * version: 1.5.2
+ * lastupdate: 2013-12-04
+ * version: 1.5.3
  * author: rin316 [Yuta Hayashi]
  * License: MIT
  */
@@ -456,7 +456,7 @@ Carousel = function ($element, options) {
 	fn.highlightEffect = function () {
 		var self = this;
 		self.$paginationItem.animate({opacity: 0.4}, {duration: 300, queue: false});
-		self.$paginationItem + $('.' + self.o.currentClass).animate({opacity: 1}, {duration: 300, queue: false});
+		self.$paginationItem + self.$element.find('.' + self.o.currentClass).animate({opacity: 1}, {duration: 300, queue: false});
 	}
 	
 	/**
